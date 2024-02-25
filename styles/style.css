@@ -36,3 +36,111 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Мой код */
+
+.page {
+  display: flex;
+}
+
+.content {
+  width: 1140px;
+  height: 534px;
+  margin: auto;
+  display: flex;
+  align-items: end;
+  gap: 30px;
+}
+
+/* Left section of content */
+
+.result {
+  width: 711px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.result__video-container {
+  width: 100%;
+  height: 386px;
+  position: relative;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.search-form__fieldset-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Right section of content */
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 26px;
+  height: 100%;
+  flex-grow: 1;
+  
+}
+
+.title {
+font-size: 75px;
+text-transform: uppercase;
+font-family: Oswald;
+line-height: 0.95;
+}
+
+.content__accent {
+  color: rgba(84, 80, 80, 1);
+}
+
+.content__list {
+  height: 298px;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.content__list-item {
+  /* ??? */
+  margin-bottom: 30px;
+
+}
+
+.content__card-link {
+  color: white;
+  text-decoration: none;
+  
+}
+
+.content__video-card {
+  display: flex;
+  align-items: start;
+  
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+}
