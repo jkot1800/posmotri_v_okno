@@ -39,6 +39,16 @@ ol {
 
 /* Мой код */
 
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}     
+
 button {
   background-color: transparent;
   border: 1px solid white;
@@ -57,16 +67,6 @@ button {
 .more-button {
   width: 100%;
 }
-
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
-} 
 
 .page {
   display: flex;
@@ -101,7 +101,7 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  position: absolute;
+  position: relative;
   z-index: 0;
   inset: 0;
 }
