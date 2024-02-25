@@ -47,7 +47,7 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-}     
+}
 
 button {
   background-color: transparent;
@@ -134,7 +134,11 @@ button {
   display: flex;
   gap: 5px;
   align-items: center;
-  
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid white;
+  outline-offset: 1px;
 }
 
 .search-form__label input[type="text"] {
@@ -146,18 +150,14 @@ button {
   color: rgba(255, 255, 255, 0.7);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-  
-  
 }
 
 .search-form__label input[type="text"]:focus {
-  outline: 1px solid white;
-  outline-offset: 2px;
+  outline: none;
 }
 
 .search-form__label input[type="text"]:focus:active {
-  outline: none;
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 
 .search-form__pseudo-checkbox {
@@ -181,13 +181,9 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   text-decoration: underline;
   text-underline-position: under;
   cursor: pointer;
-  
 }
 
-
 /* Стилизация формы поиска */
-
-
 
 /* Right section of content */
 
