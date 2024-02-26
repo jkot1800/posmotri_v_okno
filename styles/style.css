@@ -12,10 +12,12 @@ html {
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
+  display: flex; /* Флекс для выравнивания по центру блока с контентом */
   color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  text-underline-position: under; /* смещение нижнего подчеркивания */
 }
 
 h1,
@@ -59,6 +61,23 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  text-decoration: underline;
+}
+
+button:active {
+  background-color: rgba(84, 80, 80, 1);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 1px solid white;
+  outline-offset: 1px;
+}
+
 .search-form__submit-button {
   min-width: 194px;
   align-self: flex-end;
@@ -66,10 +85,6 @@ button {
 
 .more-button {
   width: 100%;
-}
-
-.page {
-  display: flex;
 }
 
 .content {
@@ -88,6 +103,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-bottom: 2px;
 }
 
 .result__video-container {
@@ -141,6 +157,11 @@ button {
   outline-offset: 1px;
 }
 
+.search-form__label:has(:focus-visible:active) {
+  outline: none;
+  border: 1px solid white;
+}
+
 .search-form__label input[type="text"] {
   min-width: 225px;
   appearance: none;
@@ -154,10 +175,6 @@ button {
 
 .search-form__label input[type="text"]:focus {
   outline: none;
-}
-
-.search-form__label input[type="text"]:focus:active {
-  border: 1px solid transparent;
 }
 
 .search-form__pseudo-checkbox {
@@ -177,13 +194,10 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   outline: 1px solid white;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover:not(:has(input[type="text"])) {
   text-decoration: underline;
-  text-underline-position: under;
   cursor: pointer;
 }
-
-/* Стилизация формы поиска */
 
 /* Right section of content */
 
@@ -211,6 +225,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
   height: 298px;
   overflow-y: scroll;
   position: relative;
+  padding: 2px;
 }
 
 .content__list-item:not(:last-child) {
@@ -220,6 +235,24 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox {
 .content__card-link {
   color: white;
   text-decoration: none;
+  display: block;
+  padding: 1px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid white;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link_current {
+  background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card {
